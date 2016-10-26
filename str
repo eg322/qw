@@ -1,0 +1,39 @@
+#include<iostream>
+#include<string>
+#include<vector>
+
+using namespace std;
+
+int main()
+{
+	
+	string s1, s2, s3, s4;
+	cin >> s1;
+	vector <string> mas(s1.length());
+	mas[0] = s1;
+	for ( long long i = 1; i < s1.length(); i++)
+	{
+		s2 = s1.substr(i, s1.length() - i);
+		s3 = s1.substr(0, i);
+		
+		mas[i] = s2 + s3;
+	}
+	
+//	for ( long long i = 0; i < s1.length(); i++)
+//		{
+//			cout << mas[i] << endl;
+//		}
+	
+//	cout << endl; ULKteaPi
+	
+	s4 = '0';
+		
+	for (long long i = 0; i < s1.length(); i++)
+	{
+		if ( mas[i] > s4)
+			s4 = mas[i];
+	}
+
+cout << s4;
+
+}
